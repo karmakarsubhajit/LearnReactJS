@@ -1,17 +1,24 @@
 import React from "react"
 import ReactDOM from "react-dom"
 
-function MyApp()
+function MyInfo()
 {
-    return  (
-        <ul>
-            <li>Helsinki</li>
-            <li>Barjedov</li>
-            <li>Bratislava</li>
-        </ul>
+    return (
+        <div style ={{color:"blue"}}>
+            <h1>
+                Subhajit Karmakar
+            </h1>    
+            <p>
+                Seeking Antifragility | Polyglot
+            </p>
+            <ol>
+                <li>Barjedov</li>
+                <li>Paris</li>
+                <li>New York</li>
+            </ol>
+        </div>
     )
 }
 
-ReactDOM.render(
-    <MyApp/>, 
-    document.getElementById("root"))
+
+ReactDOM.render(<MyInfo/>,document.getElementById("root"));
