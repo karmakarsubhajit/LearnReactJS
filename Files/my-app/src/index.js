@@ -1,6 +1,17 @@
 import React from "react"
 import ReactDOM from "react-dom"
 
-ReactDOM.render(<div><h1>Hello World :)</h1> <h2>Bye World! :(</h2></div>,document.getElementById("root"))
+function MyApp()
+{
+    return  (
+        <ul>
+            <li>Helsinki</li>
+            <li>Barjedov</li>
+            <li>Bratislava</li>
+        </ul>
+    )
+}
 
-
+ReactDOM.render(
+    <MyApp/>, 
+    document.getElementById("root"))
