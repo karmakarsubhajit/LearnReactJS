@@ -6,9 +6,8 @@ function Product(props)
 {
     return (
         <div>
-            <h4>Price: {props.price}</h4>
-            <h4>Name: {props.name}</h4>
-            <h4>Desc: {props.desc}</h4>
+            <h4>Name: {props.product.name}</h4>
+            <p>{props.product.price.toLocaleString("en-US",{style:"currency",currency:"USD"})} - {props.product.desc}</p>
         </div>
     )
 
