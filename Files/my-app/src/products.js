@@ -1,0 +1,40 @@
+const prods=[
+    {
+        id:"1",
+        name:"A",
+        price:"1",
+        desc:"HeppA"
+    },
+    {
+        id:"2",
+        name:"B",
+        price:"2",
+        desc:"HeppB"
+    },
+    {
+        id:"3",
+        name:"C",
+        price:"3",
+        desc:"HeppC"
+    },
+    {
+        id:"4",
+        name:"D",
+        price:"4",
+        desc:"HeppD"
+    },
+    {
+        id:"5",
+        name:"E",
+        price:"5",
+        desc:"HeppE"
+    },
+    {
+        id:"6",
+        name:"F",
+        price:"6",
+        desc:"HeppF"
+    }
+]
+
+export default prods
