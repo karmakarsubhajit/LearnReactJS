@@ -1,12 +1,12 @@
 import React from "react"
 import '../index.css'
 
-function Todoitem()
+function Todoitem(props)
 {
     return(
     <div className="todo-item">
-        <input type="checkbox"/>
-        <p>Placeholder</p>
+        <input type="checkbox" checked={props.todoList.completed}/>
+        <p>{props.todoList.text}</p>
     </div>)
 }
 
