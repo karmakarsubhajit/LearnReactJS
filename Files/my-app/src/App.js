@@ -2,19 +2,18 @@ import React from "react"
 
 class App extends React.Component {
 
-  constructor()
-  {
-      super()
-      this.state = {
-        answer:"Yes"
-      }
+  constructor(){
+    super()
+    {
+      this.state={name:"Subhajit",age:"22"}
+    }
   }
-
 
   render(){
       return (
           <div>
-            <h1>Is state imp? {this.state.answer}</h1>
+            <h1> {this.state.name}</h1>
+            <h3> {this.state.age} years old</h3>
           </div>
       )
   }
