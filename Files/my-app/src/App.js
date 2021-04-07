@@ -4,17 +4,31 @@ import todosData from './todosData'
 import './index.css'
 
 
-function App()
+
+class App extends React.Component
 {
-    const todoComponents = todosData.map(todo=>
-        <Todoitem key={todo.id} todoList={todo}/>)
+  constructor()
+  {
+    super()
+    {
+        this.state={
+          todoComp:todosData
+        }
+    }
+  
+  }
 
+  render()
+  {
+    const todoComponents=this.state.todoComp.map(todo =>
+      <Todoitem key ={todo.id} todoList={todo}/>)
 
-    return (
-    <div className="todo-list"> 
+    return (<div className="todo-list">
       {todoComponents}
-    </div>
-    )
+    </div>)
+  }
+
+
 }
 
 
