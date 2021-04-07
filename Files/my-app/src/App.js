@@ -1,23 +1,21 @@
 import React from "react"
 
-class App extends React.Component {
-
-  constructor()
-  {
-      super()
-      this.state = {
-        answer:"Yes"
-      }
-  }
+function handleClick()
+{
+  console.log("I was clicked")
+}
 
 
-  render(){
-      return (
-          <div>
-            <h1>Is state imp? {this.state.answer}</h1>
-          </div>
-      )
-  }
+function App()
+{
+  return (
+    <div>
+      <img onMouseOver={() =>console.log("Hovered!")} src="https://www.fillmurray.com/200/100"/>
+      <br/>
+      <br/>
+      <button onClick={handleClick}>Click me</button>
+    </div>
+  )
 }
 
 export default App
