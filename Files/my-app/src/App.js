@@ -1,23 +1,33 @@
 import React from "react"
 
-class App extends React.Component {
+
+
+class App extends React.Component{
 
   constructor()
   {
-      super()
-      this.state = {
-        answer:"Yes"
-      }
+    super()
+    {
+      this.state = {isLoggedIn:true}
+    }
   }
 
-
-  render(){
-      return (
-          <div>
-            <h1>Is state imp? {this.state.answer}</h1>
-          </div>
-      )
+  render()
+  {
+    if(this.state.isLoggedIn)
+    return (
+      <div>
+        <h1>You are currently logged in </h1>
+      </div>
+    )
+    else
+    return (
+      <div>
+        <h1>You are currently logged out </h1>
+      </div>
+    )
   }
 }
+
 
 export default App
