@@ -1,4 +1,5 @@
 import React from "react"
+import Conditional from './Components/Conditional'
 
 class App extends React.Component {
 
@@ -6,15 +7,25 @@ class App extends React.Component {
   {
       super()
       this.state = {
-        answer:"Yes"
+        isLoading:true
       }
+  }
+
+  componentDidMount(){
+    setTimeout(()=>{
+      this.setState({
+        isLoading:false
+      })
+    }, 1500)
   }
 
 
   render(){
       return (
           <div>
-            <h1>Is state imp? {this.state.answer}</h1>
+            {this.state.isLoading?
+            <h1>Loading..</h1> : 
+            <Conditional isLoading={this.state.isLoading}/>}
           </div>
       )
   }
