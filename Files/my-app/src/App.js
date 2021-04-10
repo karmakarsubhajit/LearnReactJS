@@ -10,6 +10,25 @@ class App extends React.Component {
       }
   }
 
+  // componentWillMount(){
+
+
+  // }
+
+  componentDidMount(){
+
+  }
+
+  shouldComponentUpdate(nextProps, nextState){
+
+  }
+  // componentWillUpdate(){
+    
+  // }
+
+  componentWillUnmount(){
+
+  }
 
   render(){
       return (
