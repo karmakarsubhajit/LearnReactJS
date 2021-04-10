@@ -7,28 +7,22 @@ class App extends React.Component {
   {
       super()
       this.state = {
-        isLoading:true
-      }
-  }
-
-  componentDidMount(){
-    setTimeout(()=>{
-      this.setState({
-        isLoading:false
-      })
-    }, 1500)
+        unreadMessages:["Call your won!",
+      "New spam email available. All links are definitely safe to click"]
+    }
   }
 
 
   render(){
       return (
           <div>
-            {this.state.isLoading?
-            <h1>Loading..</h1> : 
-            <Conditional isLoading={this.state.isLoading}/>}
+            {this.state.unreadMessages.length>0 && 
+            <h2> You have {this.state.unreadMessages.length} unread messages </h2>
+            }
           </div>
       )
   }
+  
 }
 
 export default App
