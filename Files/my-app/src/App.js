@@ -1,23 +1,41 @@
 import React from "react"
 
-class App extends React.Component {
 
+class App extends React.Component
+{
   constructor()
   {
-      super()
-      this.state = {
-        answer:"Yes"
+    super()
+      this.state={isLoggedIn:false}
+
+      this.myFunc=this.myFunc.bind(this)
+  }
+  
+  myFunc()
+  {
+    this.setState(prevState=>{
+      return {
+        isLoggedIn:!prevState.isLoggedIn
       }
+    }
+    )
   }
 
-
-  render(){
-      return (
-          <div>
-            <h1>Is state imp? {this.state.answer}</h1>
-          </div>
-      )
+  render()
+  {
+    let buttonText = this.state.isLoggedIn?"Log out":"Log in"
+    let buttonDisplay = this.state.isLoggedIn?"Logged In":"Logged Out"
+    
+    return(
+      <div>
+        <h1>{buttonDisplay}</h1>
+        <button onClick={this.myFunc}>{buttonText} </button>
+      </div>
+    )
   }
+
 }
+
+
 
 export default App
