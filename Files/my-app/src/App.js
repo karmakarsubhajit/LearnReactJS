@@ -1,23 +1,11 @@
 import React from "react"
+import Form from "./FormContainer"
 
-class App extends React.Component {
-
-  constructor()
-  {
-      super()
-      this.state = {
-        answer:"Yes"
-      }
-  }
-
-
-  render(){
-      return (
-          <div>
-            <h1>Is state imp? {this.state.answer}</h1>
-          </div>
-      )
-  }
+function App()
+{
+    return (<Form/>)
 }
 
+
 export default App
+
