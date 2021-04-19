@@ -1,23 +1,14 @@
 import React from "react"
+import Header from './Components/Header'
+import MemeGenerator from './Components/MemeGenerator'
 
-class App extends React.Component {
+function App() 
+{
+    return(<div>
+        <Header/>
+        <MemeGenerator/>
+    </div>)
 
-  constructor()
-  {
-      super()
-      this.state = {
-        answer:"Yes"
-      }
-  }
-
-
-  render(){
-      return (
-          <div>
-            <h1>Is state imp? {this.state.answer}</h1>
-          </div>
-      )
-  }
 }
 
 export default App
