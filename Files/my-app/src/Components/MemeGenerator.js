@@ -19,7 +19,7 @@ class MemeGenerator extends React.Component
     {
         event.preventDefault()
 
-        const randomElement = this.state.allMemeImages[Math.floor(Math.random() * this.state.allMemeImages.length)]
+        const randomElement = this.allMemeImages[Math.floor(Math.random() * this.state.allMemeImages.length)]
         this.setState({randomImage:randomElement.url})
     }
 
